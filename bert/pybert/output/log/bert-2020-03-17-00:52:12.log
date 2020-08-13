@@ -1,0 +1,60 @@
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, arch='bert', do_data=False, do_lower_case=True, do_test=False, do_train=True, epochs=6, eval_batch_size=8, eval_max_seq_len=256, fp16=False, fp16_opt_level='O1', grad_clip=1.0, gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, loss_scale=0, mode='min', monitor='valid_loss', n_gpu='0', predict_checkpoints=0, resume_path='', save_best=True, seed=42, sorted=1, train_batch_size=8, train_max_seq_len=256, valid_size=0.2, warmup_proportion=0.1, weight_decay=0.01)
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+initializing model
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-config.json from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/45629519f3117b89d89fd9c740073d8e4c1f0a70f9842476185100a8afe715d1.893eae5c77904d1e9175faf98909639d3eb20cc7e13e2be395de9a0d8a0dad52
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 119547
+}
+
+loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-pytorch_model.bin from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/5b5b80054cd2c95a946a8e0ce0b93f56326dff9fbda6a6c3e02de3c91c918342.7131dcb754361639a7d5526985f880879c9bfd144b65a0bf50590bddb7de9059
+Weights of BertForMultiLable not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+Weights from pretrained model not used in BertForMultiLable: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+initializing callbacks
+***** Running training *****
+  Num Epochs = 6
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 200000
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_all_valid_examples_bert
+Loading features from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_all_valid_features_256_bert
+sorted data by th length of input
+Epoch 1/6
+Epoch 1 - summary 1/1746: summary_1779
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_examples_1779_bert
+Loading features from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_features_1779_256_bert
+sorted data by th length of input
+Epoch 1 - summary 2/1746: summary_2423
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_examples_2423_bert
+Loading features from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_features_2423_256_bert
+sorted data by th length of input
+
+Epoch: 1 -  valid_loss: 0.6980 - valid_auc: 0.4773 - valid_f1: 0.0044 

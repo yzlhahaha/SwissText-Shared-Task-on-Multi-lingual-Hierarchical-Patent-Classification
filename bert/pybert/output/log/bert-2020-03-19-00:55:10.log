@@ -1,0 +1,36 @@
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, arch='bert', do_data=False, do_lower_case=False, do_test=True, do_train=False, epochs=10, eval_batch_size=8, eval_max_seq_len=256, fp16=False, fp16_opt_level='O1', grad_clip=1.0, gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, loss_scale=0, mode='min', monitor='valid_loss', n_gpu='0', predict_checkpoints=0, resume_path='', save_best=False, seed=42, sorted=1, train_batch_size=8, train_max_seq_len=256, valid_size=0.2, warmup_proportion=0.1, weight_decay=0.01)
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/t_cached_test_examples_bert
+Loading features from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/t_cached_test_features_256_bert
+loading configuration file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/output/checkpoints/bert/config.json
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 119547
+}
+
+loading weights file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/output/checkpoints/bert/pytorch_model.bin

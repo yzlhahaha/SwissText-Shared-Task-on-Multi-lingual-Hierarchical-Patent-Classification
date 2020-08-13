@@ -1,0 +1,54 @@
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, arch='bert', do_data=False, do_lower_case=True, do_test=False, do_train=True, epochs=6, eval_batch_size=8, eval_max_seq_len=256, fp16=False, fp16_opt_level='O1', grad_clip=1.0, gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, loss_scale=0, mode='min', monitor='valid_loss', n_gpu='0', predict_checkpoints=0, resume_path='', save_best=True, seed=42, sorted=1, train_batch_size=8, train_max_seq_len=256, valid_size=0.2, warmup_proportion=0.1, weight_decay=0.01)
+initializing model
+loading configuration file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/pretrain/bert/base-uncased/config.json
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+loading weights file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/pretrain/bert/base-uncased/pytorch_model.bin
+Weights of BertForMultiLable not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+Weights from pretrained model not used in BertForMultiLable: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+initializing callbacks
+***** Running training *****
+  Num Epochs = 6
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 200000
+Epoch 1/6
+Saving examples into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/cached_train_examples_bert
+*** Example ***
+guid: train-0
+tokens: [CLS] damp ##ft ##ur ##bine ; steam turbine ; turbine a va ##pe ##ur ; a steam turbine ( 100 ) has : a cas ##ing ( 1 ) ; a rotor ( 2 ) rot ##ata ##bly arranged in the ##cas ##ing ( 1 ) ; a no ##zzle dia ##ph ##rag ##m ( 3 ) con ##centric ##ally arranged with respect to the ##rot ##or ( 2 ) , the no ##zzle dia ##ph ##rag ##m ( 3 ) being engaged with the cas ##ing ( 1 ) ; moving ##bla ##des ( 4 ) arranged in ci ##rc ##um ##fer ##ential direction on outer ci ##rc ##um ##ference of the ##rot ##or ( 2 ) at positions adjacent to the no ##zzle dia ##ph ##rag ##m ( 3 ) ; seal strips ( 4 ##d ) ci ##rc ##um ##fer ##ential ##ly extending on tips ( 4 ##c ) of the moving blades ( 4 ) , the seals ##trip ##s ( 4 ##d ) protruding in radial outward direction ; and an ab ##rada ##ble structure ( 5 ) rigid ##ly connected to the no ##zzle dia ##ph ##rag ##m ( 3 ) . the ab ##rada ##ble structure ( 5 ) faces the seal strips ( 4 ##d ) in radial direction at a facing surface , and has ana ##bra ##dable part ( 5 ##a ) made of an ab ##rada ##ble material arranged at the facing ##sur ##face . ; a steam turbine ( 100 ) has : [SEP]
+input_ids: 101 10620 6199 3126 16765 1025 5492 14027 1025 14027 1037 12436 5051 3126 1025 1037 5492 14027 1006 2531 1007 2038 1024 1037 25222 2075 1006 1015 1007 1025 1037 18929 1006 1016 1007 18672 6790 6321 5412 1999 1996 15671 2075 1006 1015 1007 1025 1037 2053 17644 22939 8458 29181 2213 1006 1017 1007 9530 22461 3973 5412 2007 4847 2000 1996 21709 2953 1006 1016 1007 1010 1996 2053 17644 22939 8458 29181 2213 1006 1017 1007 2108 5117 2007 1996 25222 2075 1006 1015 1007 1025 3048 28522 6155 1006 1018 1007 5412 1999 25022 11890 2819 7512 24271 3257 2006 6058 25022 11890 2819 25523 1997 1996 21709 2953 1006 1016 1007 2012 4460 5516 2000 1996 2053 17644 22939 8458 29181 2213 1006 1017 1007 1025 7744 12970 1006 1018 2094 1007 25022 11890 2819 7512 24271 2135 8402 2006 10247 1006 1018 2278 1007 1997 1996 3048 10491 1006 1018 1007 1010 1996 13945 24901 2015 1006 1018 2094 1007 23868 1999 15255 15436 3257 1025 1998 2019 11113 28510 3468 3252 1006 1019 1007 11841 2135 4198 2000 1996 2053 17644 22939 8458 29181 2213 1006 1017 1007 1012 1996 11113 28510 3468 3252 1006 1019 1007 5344 1996 7744 12970 1006 1018 2094 1007 1999 15255 3257 2012 1037 5307 3302 1010 1998 2038 9617 10024 20782 2112 1006 1019 2050 1007 2081 1997 2019 11113 28510 3468 3430 5412 2012 1996 5307 26210 12172 1012 1025 1037 5492 14027 1006 2531 1007 2038 1024 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-1
+tokens: [CLS] magnet ##ant ##rie ##b oh ##ne re ##man ##en ##z ##sche ##ibe ; magnetic act ##ua ##tor without re ##man ##ence disk ; action ##ne ##ur magnet ##ique sans di ##sque de re ##man ##ence ; du ##rch an ##bri ##ng ##ung eine ##r oder me ##hrer ##er aus ##ne ##hm ##ungen , ein ##stic ##he oder der ##gle ##iche ##na ##uf der an ##lage ##fl ##ache des an ##kers oder der pol ##fl ##ache eine ##s pol ##st ##uck ##s kan ##n die ##hal ##tek ##raf ##t des magnet ##ant ##rie ##bs so wei ##t ve ##rring ##ert we ##rden , das ##s tr ##ot ##z fe ##hl ##end ##erre ##man ##en ##z ##sche ##ibe ein sc ##hli ##e ##ße ##n inner ##hal ##b eine ##r se ##ku ##nde sic ##her ge ##ste ##ll ##t wi ##rd . der ve ##rz ##ich ##t auf die re ##man ##en ##z ##sche ##ibe fu ##hr ##t zu eine ##r er ##ho ##hun ##g der ##bet ##rie ##bs ##sic ##her ##hei ##t und eine ##r ve ##rmin ##der ##ung der te ##ile ##za ##hl . der magnet ##ant ##rie ##b ( 5 ) kan ##n mit powers ##chal ##tung ##en bet ##rie ##ben we ##rden , die die sp ##ule ( 10 ) an ##fan ##gli ##ch mit ##ein ##em be ##son ##ders ho ##hen st ##rom beau ##fs ##ch ##lage ##n , der zu eine ##r uber ##erre ##gun ##g fu ##hr ##t . der magnet ##ant ##rie ##b ( 5 ) e ##ign ##et [SEP]
+input_ids: 101 16853 4630 7373 2497 2821 2638 2128 2386 2368 2480 22842 20755 1025 8060 2552 6692 4263 2302 2128 2386 10127 9785 1025 2895 2638 3126 16853 7413 20344 4487 17729 2139 2128 2386 10127 1025 4241 11140 2019 23736 3070 5575 27665 2099 27215 2033 17875 2121 17151 2638 14227 23239 1010 16417 10074 5369 27215 4315 9354 17322 2532 16093 4315 2019 20679 10258 15395 4078 2019 11451 27215 4315 14955 10258 15395 27665 2015 14955 3367 12722 2015 22827 2078 3280 8865 23125 27528 2102 4078 16853 4630 7373 5910 2061 11417 2102 2310 18807 8743 2057 18246 1010 8695 2015 19817 4140 2480 10768 7317 10497 28849 2386 2368 2480 22842 20755 16417 8040 27766 2063 17499 2078 5110 8865 2497 27665 2099 7367 5283 13629 14387 5886 16216 13473 3363 2102 15536 4103 1012 4315 2310 15378 7033 2102 21200 3280 2128 2386 2368 2480 22842 20755 11865 8093 2102 16950 27665 2099 9413 6806 17157 2290 4315 20915 7373 5910 19570 5886 26036 2102 6151 27665 2099 2310 27512 4063 5575 4315 8915 9463 4143 7317 1012 4315 16853 4630 7373 2497 1006 1019 1007 22827 2078 10210 4204 18598 21847 2368 6655 7373 10609 2057 18246 1010 3280 3280 11867 9307 1006 2184 1007 2019 15143 25394 2818 10210 12377 6633 2022 3385 13375 7570 10222 2358 21716 17935 10343 2818 20679 2078 1010 4315 16950 27665 2099 19169 28849 12734 2290 11865 8093 2102 1012 4315 16853 4630 7373 2497 1006 1019 1007 1041 23773 3388 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Saving features into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/cached_train_features_256_bert
+sorted data by th length of input
+Saving examples into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/cached_valid_examples_bert
+Saving features into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/cached_valid_features_256_bert

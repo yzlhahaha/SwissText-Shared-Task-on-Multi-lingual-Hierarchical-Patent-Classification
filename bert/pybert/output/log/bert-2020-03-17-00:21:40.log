@@ -1,0 +1,62 @@
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, arch='bert', do_data=False, do_lower_case=False, do_test=False, do_train=True, epochs=6, eval_batch_size=8, eval_max_seq_len=256, fp16=False, fp16_opt_level='O1', grad_clip=1.0, gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, loss_scale=0, mode='min', monitor='valid_loss', n_gpu='0', predict_checkpoints=0, resume_path='', save_best=False, seed=42, sorted=1, train_batch_size=8, train_max_seq_len=256, valid_size=0.2, warmup_proportion=0.1, weight_decay=0.01)
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+initializing model
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-config.json from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/45629519f3117b89d89fd9c740073d8e4c1f0a70f9842476185100a8afe715d1.893eae5c77904d1e9175faf98909639d3eb20cc7e13e2be395de9a0d8a0dad52
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 119547
+}
+
+loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-pytorch_model.bin from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/5b5b80054cd2c95a946a8e0ce0b93f56326dff9fbda6a6c3e02de3c91c918342.7131dcb754361639a7d5526985f880879c9bfd144b65a0bf50590bddb7de9059
+Weights of BertForMultiLable not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+Weights from pretrained model not used in BertForMultiLable: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+initializing callbacks
+***** Running training *****
+  Num Epochs = 6
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 200000
+Warning: There's no GPU available on this machine, training will be performed on CPU.
+Warning: The number of GPU's configured to use is 0, but only 0 are available on this machine.
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Saving examples into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_all_valid_examples_bert
+*** Example ***
+guid: train-0
+tokens: [CLS] ver ##fahren und vor ##richtung zum übertragen eines date ##nsa ##tze ##s von einer ersten an eine zweite ein ##richtung ; method and device for trans ##mitting a data set from a first to a second device ; procédé et dispositif de transmission d ' un ensemble de données d ' un premier à un second dispositif ; ver ##fahren zum übertragen eines date ##nsa ##tze ##s ( d ) von einer ersten an eine zweite ein ##richtung ( 1 , 2 ) , um ##fassen ##d : s ##chützen ( s ##1 , s ##1 ' ) des date ##nsa ##tze ##s ( d ) in der ersten ein ##richtung ( 1 ) anhand eines aut ##hen ##tica ##ted - en ##c ##ry ##ption - ver ##fahren ##s , in welchem eine aut ##hen ##ti ##zit ##ät und / oder inte ##gri ##tät des date ##nsa ##tze ##s ( d ) anhand eines vor ##bes ##tim ##mten aut ##hen ##tis ##ierung ##sg ##eh ##eim ##nisse ##s ( 8 ) ge ##schützt wird und in welchem eine vert ##rau ##lichkeit des date ##nsa ##tze ##s ( d ) anhand eines vor ##bes ##tim ##mten vert ##rau ##lichkeit ##sg ##eh ##eim ##nisse ##s ( 9 ) ge ##schützt wird , wobei das s ##chützen des date ##nsa ##tze ##s ( d ) dera ##rt erfolgt , dass der ge ##schützt ##e date ##nsa ##tz ( d ) nur durch eine ein ##richtung , in der ein dem vor ##bes ##tim ##mten vert ##rau ##lichkeit ##sg [SEP]
+input_ids: 101 16719 28638 10130 11190 41406 10580 53128 11655 13664 19999 50401 10107 10166 10599 12226 10151 10359 21492 10290 41406 132 22414 10111 33091 10142 37241 86074 169 11165 11847 10188 169 10422 10114 169 11132 33091 132 105633 10131 47277 10104 35283 172 112 10119 15576 10104 22352 172 112 10119 11913 254 10119 11132 47277 132 16719 28638 10580 53128 11655 13664 19999 50401 10107 113 172 114 10166 10599 12226 10151 10359 21492 10290 41406 113 122 117 123 114 117 10293 67066 10162 131 187 104795 113 187 10759 117 187 10759 112 114 10139 13664 19999 50401 10107 113 172 114 10106 10118 12226 10290 41406 113 122 114 75830 11655 49523 14786 13640 11912 118 10110 10350 10908 36478 118 16719 28638 10107 117 10106 104320 10359 49523 14786 10325 46680 17615 10130 120 10760 14168 59497 24308 10139 13664 19999 50401 10107 113 172 114 75830 11655 11190 16216 28184 68496 49523 14786 13434 19862 84105 25723 35812 47762 10107 113 129 114 46503 103375 10790 10130 10106 104320 10359 20900 40088 31242 10139 13664 19999 50401 10107 113 172 114 75830 11655 11190 16216 28184 68496 20900 40088 31242 84105 25723 35812 47762 10107 113 130 114 46503 103375 10790 117 18343 10242 187 104795 10139 13664 19999 50401 10107 113 172 114 95465 10976 36407 117 11064 10118 46503 103375 10112 13664 19999 13695 113 172 114 11354 10714 10359 10290 41406 117 10106 10118 10290 10268 11190 16216 28184 68496 20900 40088 31242 84105 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-1
+tokens: [CLS] ver ##fahren , vor ##richtungen , computer ##les ##bare medie ##n und system ##e zum auf ##bau ze ##rti ##fiziert ##er verb ##ind ##ungen mit end ##ger ##äten in einem lokalen net ##z ##werk ; method , devices , computer - read ##able media and systems for establishing certified connections with end devices in a local area network ; procédé ##s , dispositif ##s , supports li ##sible ##s par ord ##inateur et systèmes d ' établissement des liaison ##s ce ##rti ##fiée ##s avec des termina ##ux dans un réseau local ; aus ##führung ##s ##formen der er ##fin ##dung bet ##reffen unter anderem ein system , um ##fassen ##d : einen client ; einen server ; eine mit dem server verbunden ##e service - kom ##ponente ; und wenig ##sten ##s ein end ##ger ##ät , das mit der service - kom ##ponente verbunden ist ; wobei der server für jedes der end ##ger ##äte einen host - namen bereits ##tellt , der dem jeweiligen end ##ger ##ät sowie der service - kom ##ponente zugeordnet ist ; wobei der server eingerichtet ist , als ant ##wort auf eine verb ##ind ##ung ##san ##frage des clients oder eines der end ##ger ##äte an einen der host - namen die verb ##ind ##ung ##san ##frage an die service - kom ##ponente weiter ##zul ##eite ##n ; wobei die service - kom ##ponente eingerichtet ist , ein ein ##tref ##fend ##es date ##n ##pak ##et , das an den host - namen oder eine entsprechende [SEP]
+input_ids: 101 16719 28638 117 11190 84774 117 18765 11268 19693 74068 10115 10130 11787 10112 10580 10329 15871 10941 28304 91170 10165 62961 32524 13692 10221 11572 11446 83798 10106 10745 73592 11988 10305 14904 132 22414 117 38120 117 18765 118 24944 13096 12518 10111 16768 10142 55258 61484 58661 10169 11572 38120 10106 169 11436 11168 17175 132 105633 10107 117 47277 10107 117 41594 11614 55864 10107 10248 39381 108738 10131 48273 172 112 46615 10139 56148 10107 10794 28304 48905 10107 10460 10139 34947 11855 10260 10119 23623 11436 132 10441 23706 10107 39326 10118 10163 29359 20458 13009 106345 11124 15655 10290 11787 117 10293 67066 10162 131 10897 37748 132 10897 38854 132 10359 10221 10268 38854 31132 10112 11989 118 12240 47290 132 10130 27386 12587 10107 10290 11572 11446 17615 117 10242 10221 10118 11989 118 12240 47290 31132 10298 132 18343 10118 38854 10307 53263 10118 11572 11446 69329 10897 19317 118 44052 13506 103444 117 10118 10268 41934 11572 11446 17615 11415 10118 11989 118 12240 47290 55561 10298 132 18343 10118 38854 49785 10298 117 10223 14917 46007 10329 10359 62961 32524 10716 14434 59634 10139 43210 10760 11655 10118 11572 11446 69329 10151 10897 10118 19317 118 44052 10128 62961 32524 10716 14434 59634 10151 10128 11989 118 12240 47290 18297 67081 74832 10115 132 18343 10128 11989 118 12240 47290 49785 10298 117 10290 10290 68058 86790 10171 13664 10115 28686 10308 117 10242 10151 10140 19317 118 44052 10760 10359 77742 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Saving features into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_all_valid_features_256_bert
+sorted data by th length of input
+Epoch 1/6

@@ -1,0 +1,70 @@
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, arch='bert', do_data=False, do_lower_case=True, do_test=False, do_train=True, epochs=6, eval_batch_size=8, eval_max_seq_len=256, fp16=False, fp16_opt_level='O1', grad_clip=1.0, gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, loss_scale=0, mode='min', monitor='valid_loss', n_gpu='0', predict_checkpoints=0, resume_path='', save_best=True, seed=42, sorted=1, train_batch_size=8, train_max_seq_len=256, valid_size=0.2, warmup_proportion=0.1, weight_decay=0.01)
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+initializing model
+loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-config.json from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/45629519f3117b89d89fd9c740073d8e4c1f0a70f9842476185100a8afe715d1.893eae5c77904d1e9175faf98909639d3eb20cc7e13e2be395de9a0d8a0dad52
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 119547
+}
+
+loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-pytorch_model.bin from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/5b5b80054cd2c95a946a8e0ce0b93f56326dff9fbda6a6c3e02de3c91c918342.7131dcb754361639a7d5526985f880879c9bfd144b65a0bf50590bddb7de9059
+Weights of BertForMultiLable not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+Weights from pretrained model not used in BertForMultiLable: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+initializing callbacks
+***** Running training *****
+  Num Epochs = 6
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 200000
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_all_valid_examples_bert
+Loading features from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_all_valid_features_256_bert
+sorted data by th length of input
+Epoch 1/6
+Epoch 1 - summary 1/1746: summary_1779
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_examples_1779_bert
+Loading features from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_features_1779_256_bert
+sorted data by th length of input
+Epoch 1 - summary 2/1746: summary_2423
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Loading examples from cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_examples_2423_bert
+*** Example ***
+guid: train-0
+tokens: [CLS] ver ##fahren und vor ##richtung zur ra ##uch ##gas ##be ##handlung ; method and app ##arat ##us for fl ##ue gas treatment ; procédé et appareil pour le traitement de gaz combustible ; a method for fl ##ue gas treatment includes causing a com ##bustion in a bo ##iler ( 15 , 19 ) using at least a part of a fl ##ue gas ( 12 ) em ##itted from a gas turbine ( 11 ) and introduced from at least one of an ups ##tream side and a down ##stream side of ##an ex ##haus ##t heat recovery bo ##iler ( 13 ) , which recover ##s a high - temperature heat ##of the fl ##ue gas ( 12 ) , so as to increase a concentration of carbon dio ##xide int ##he fl ##ue gas , and recover ##ing carbon dio ##xide in a carbon dio ##xide recovery ##app ##arat ##us ( 18 ) . ; a method for fl ##ue gas treatment includes causing a com ##bustion in a bo ##iler ( 15 , 19 ) using at least a part of a fl ##ue gas ( 12 ) em ##itted from a gas turbine ( 11 ) and introduced from at least one of an ups ##tream side and a down ##stream side of ##an ex ##haus ##t heat recovery bo ##iler ( 13 ) , which recover ##s a high - temperature heat ##of the fl ##ue gas ( 12 ) , so as to increase a concentration of [SEP]
+input_ids: 101 16719 28638 10130 11190 41406 10736 11859 20591 14644 11044 52044 132 22414 10111 72894 49651 10251 10142 58768 12772 16091 21379 132 105633 10131 65347 10322 10141 46824 10104 34055 54811 132 169 22414 10142 58768 12772 16091 21379 15433 34705 169 10212 96641 10106 169 20506 33526 113 10208 117 10270 114 13382 10160 16298 169 10668 10108 169 58768 12772 16091 113 10186 114 10266 107456 10188 169 16091 78995 113 10193 114 10111 17037 10188 10160 16298 10464 10108 10151 107717 90047 12250 10111 169 12935 69190 12250 10108 10206 11419 14465 10123 33955 61958 20506 33526 113 10249 114 117 10319 94962 10107 169 11846 118 23509 33955 20324 10105 58768 12772 16091 113 10186 114 117 10380 10146 10114 20299 169 37524 10108 36915 14283 44186 26391 11643 58768 12772 16091 117 10111 94962 10230 36915 14283 44186 10106 169 36915 14283 44186 61958 102295 49651 10251 113 10218 114 119 132 169 22414 10142 58768 12772 16091 21379 15433 34705 169 10212 96641 10106 169 20506 33526 113 10208 117 10270 114 13382 10160 16298 169 10668 10108 169 58768 12772 16091 113 10186 114 10266 107456 10188 169 16091 78995 113 10193 114 10111 17037 10188 10160 16298 10464 10108 10151 107717 90047 12250 10111 169 12935 69190 12250 10108 10206 11419 14465 10123 33955 61958 20506 33526 113 10249 114 117 10319 94962 10107 169 11846 118 23509 33955 20324 10105 58768 12772 16091 113 10186 114 117 10380 10146 10114 20299 169 37524 10108 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: train-1
+tokens: [CLS] ver ##fahren zur r ##ück ##ge ##win ##nung von energie aus dem ab ##gas eines br ##enne ##rs ; method for re ##gain ##ing energy from the ex ##haus ##t gas of a bu ##rner ; procédé de r ##éc ##up ##ération d ' énergie à partir du gaz d ' é ##chap ##pe ##ment d ' un br ##û ##leur ; zur dam ##pfer ##zeug ##ung werden br ##enne ##r ( 11 ) eingesetzt , die einen dam ##pf ##kes ##sel ( 10 ) be ##hei ##zen . der br ##enne ##r ( 11 ) erzeugt ab ##gas mit einer ver ##hält ##nis ##mäßig hohen ##tem ##pera ##tur . es ist bekannt , einen teil der energie im he ##i ##ßen ab ##gas des ##bre ##nner ##s ( 11 ) zurück ##zug ##ew ##innen durch vor ##w ##är ##mung der dem br ##enne ##r ( 11 ) zu ##zuführen ##den verb ##ren ##nung ##slu ##ft . danach hat das ab ##gas immer noch eine ##ver ##hält ##nis ##mäßig hohe temperatur von bis zu 120 ##° ##c . die er ##fin ##dung sieht es vor , dem ab ##gas des br ##enne ##rs ( 11 ) zusätzliche energie ##zu ##m vor ##w ##är ##men des sp ##eis ##ew ##asse ##rs für den dam ##pf ##kes ##sel ( 10 ) zu ent ##ziehen . dadurch ##kan ##n auch die rest ##liche energie im ab ##gas des br ##enne ##rs ( 11 ) größtenteils ##zur ##ück ##ge ##won ##nen werden , indem die temperatur des ab [SEP]
+input_ids: 101 16719 28638 10736 186 67043 10525 24748 35637 10166 39092 10441 10268 11357 14644 11655 33989 21838 10943 132 22414 10142 11639 85473 10230 18603 10188 10105 11419 14465 10123 16091 10108 169 11499 65730 132 105633 10104 186 102063 14590 51335 172 112 35518 254 11523 10168 34055 172 112 263 31678 11355 10426 172 112 10119 33989 71323 55692 132 10736 39121 69828 95780 10716 10615 33989 21838 10129 113 10193 114 19976 117 10128 10897 39121 55942 21885 12912 113 10150 114 10347 89508 11985 119 10118 33989 21838 10129 113 10193 114 95798 11357 14644 10221 10599 16719 77455 12597 48392 28839 19665 37097 15698 119 10196 10298 14874 117 10897 21185 10118 39092 10211 10261 10116 20284 11357 14644 10139 13724 30021 10107 113 10193 114 14658 21062 26127 35633 10714 11190 10874 19269 49026 10118 10268 33989 21838 10129 113 10193 114 10304 60883 10633 62961 10969 35637 107992 12961 119 22961 11250 10242 11357 14644 15967 11230 10359 12563 77455 12597 48392 31971 71838 10166 10467 10304 12048 12007 10350 119 10128 10163 29359 20458 43823 10196 11190 117 10268 11357 14644 10139 33989 21838 10943 113 10193 114 83904 39092 13078 10147 11190 10874 19269 11418 10139 32650 36776 26127 77923 10943 10307 10140 39121 55942 21885 12912 113 10150 114 10304 61047 53833 119 34133 10706 10115 10515 10128 17333 12337 39092 10211 11357 14644 10139 33989 21838 10943 113 10193 114 93220 63934 67043 10525 36816 11216 10615 117 35417 10128 71838 10139 11357 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Saving features into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/cached/cached_train_features_2423_256_bert
+sorted data by th length of input

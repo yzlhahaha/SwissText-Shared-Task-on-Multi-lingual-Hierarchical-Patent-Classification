@@ -1,0 +1,49 @@
+Training/evaluation parameters Namespace(adam_epsilon=1e-08, arch='bert', do_data=False, do_lower_case=False, do_test=True, do_train=False, epochs=10, eval_batch_size=8, eval_max_seq_len=256, fp16=False, fp16_opt_level='O1', grad_clip=1.0, gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, loss_scale=0, mode='min', monitor='valid_loss', n_gpu='0', predict_checkpoints=0, resume_path='', save_best=False, seed=42, sorted=1, train_batch_size=8, train_max_seq_len=256, valid_size=0.2, warmup_proportion=0.1, weight_decay=0.01)
+loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased-vocab.txt from cache at /home/home1/xw176/.cache/torch/pytorch_transformers/96435fa287fbf7e469185f1062386e05a075cadbf6838b74da22bf64b080bc32.99bcd55fc66f4f3360bc49ba472b940b8dcf223ea6a345deb969d607ca900729
+Saving examples into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/cached_test_examples_bert
+*** Example ***
+guid: test-0
+tokens: [CLS] Vers ##chluss für Be ##hält ##er mit verb ##esse ##rter Di ##chtung ; Cl ##osu ##re for contain ##ers with improved seal ##ing ; Fe ##rme ##ture pour r ##éc ##ip ##ients présentant une éta ##nch ##éit ##é am ##élio ##rée ; A closure for contain ##ers with improved seal ##ing comprising a covering caps ##ule ( 14 ) in the form of an over ##tur ##ned cup , provided with an inner th ##read ##ing ( 17 ) and gu ##aran ##tee ring ( 15 ) connected to the covering caps ##ule ( 14 ) by means of a series of fra ##ngi ##ble bridges ( 16 ) , and a mouth ( 12 ) of a contain ##er ( 13 ) provided with an outer th ##read ##ing ( 24 ) , where ##in said covering caps ##ule ( 14 ) , close to its flat top , is provided with an ann ##ular ri ##b pro ##tru ##ding in ##ward ##ly ( 18 ) , having a diameter close to or slightly smaller than the outer diameter of an upper end of the mouth ( 12 ) on which it is engaged , and said gu ##aran ##tee ring ( 15 ) comprises a series of fl ##aps ( 19 ) pro ##tru ##ding in ##ward ##ly which , upon rotation , are engaged in fl ##aps pro ##tru ##ding out ##ward ##ly ( 20 ) position ##ed at the base of the mouth ( 12 ) of the contain ##er [SEP]
+input_ids: 101 46744 77116 10307 14321 77455 10165 10221 62961 24641 55057 12944 41966 132 101989 67253 10246 10142 36003 10901 10169 34605 37985 10230 132 20187 29744 16023 10322 186 102063 17437 88780 68310 10231 72182 31215 95487 10333 10392 107206 21955 132 138 69177 10142 36003 10901 10169 34605 37985 10230 78720 169 41810 52036 16115 113 10247 114 10106 10105 12188 10108 10151 10491 15698 17021 41506 117 16491 10169 10151 44615 77586 66058 10230 113 10273 114 10111 75980 24367 47738 21550 113 10208 114 26989 10114 10105 41810 52036 16115 113 10247 114 10155 17574 10108 169 11366 10108 10628 31681 11203 70888 113 10250 114 117 10111 169 42213 113 10186 114 10108 169 36003 10165 113 10249 114 16491 10169 10151 52092 77586 66058 10230 113 10233 114 117 10940 10245 12415 41810 52036 16115 113 10247 114 117 16065 10114 10474 31307 12364 117 10124 16491 10169 10151 28481 18062 29956 10457 11284 45388 13971 10106 16988 10454 113 10218 114 117 13677 169 31403 16065 10114 10345 31603 23309 11084 10105 52092 31403 10108 10151 24172 11572 10108 10105 42213 113 10186 114 10135 10319 10271 10124 34377 117 10111 12415 75980 24367 47738 21550 113 10208 114 58633 169 11366 10108 58768 76591 113 10270 114 11284 45388 13971 10106 16988 10454 10319 117 15378 53583 117 10301 34377 10106 58768 76591 11284 45388 13971 10950 16988 10454 113 10197 114 12956 10336 10160 10105 11404 10108 10105 42213 113 10186 114 10108 10105 36003 10165 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*** Example ***
+guid: test-1
+tokens: [CLS] Kraft ##stoffe ##ins ##pri ##tz ##vor ##richtung , Kraft ##stoffe ##ins ##pri ##tz ##system und Verfahren zur Best ##immung einer Fe ##hl ##fu ##nkt ##ion davon ; Fuel injection device , fuel injection system , and method for det ##erm ##ining mal ##fu ##nction of the same ; Dis ##posit ##if d ' injection de car ##buran ##t , système d ' injection de car ##buran ##t , et procédé pour déterminer son dy ##s ##fon ##ction ##nement ; A fuel injection device includes a fuel injection valve ( 20 ) for in ##ject ##ing fuel , which is distributed from a pressure - ac ##cum ##ulation vessel ( 12 ) . A pressure sensor ( 20 ##a ) is located in a fuel passage ( 25 ) , which extends from the pressure - ac ##cum ##ulation vessel ( 12 ) to a no ##zzle hole ( 20 ##f ) of the fuel injection valve ( 20 ) . The pressure sensor ( 20 ##a ) is located closer to the no ##zzle hole ( 20 ##f ) than the pressure - ac ##cum ##ulation vessel ( 12 ) and con ##figur ##ed to det ##ect pressure of fuel . The fuel injection device further includes a storage unit ( 26 ) for stor ##ing individual difference information , which indicates an injection characteristic of the fuel injection valve ( 20 ) . The injection characteristic is obtained by an examination . The individual difference information indicates a relationship between an injection state [SEP]
+input_ids: 101 32770 88757 14411 101319 13695 19360 41406 117 32770 88757 14411 101319 13695 41912 10130 37344 10736 11730 65031 10599 20187 17054 20758 64236 11046 20816 132 103599 91879 33091 117 30550 91879 11787 117 10111 22414 10142 10349 91724 23025 15189 20758 106853 10108 10105 11561 132 101270 106185 13918 172 112 91879 10104 13000 67469 10123 117 18457 172 112 91879 10104 13000 67469 10123 117 10131 105633 10322 97665 10312 13906 10107 32014 17530 32910 132 138 30550 91879 33091 15433 169 30550 91879 87277 113 10197 114 10142 10106 56617 10230 30550 117 10319 10124 35123 10188 169 23460 118 13621 23722 27894 47023 113 10186 114 119 138 23460 78304 113 10197 10113 114 10124 11954 10106 169 30550 22718 113 10258 114 117 10319 65066 10188 10105 23460 118 13621 23722 27894 47023 113 10186 114 10114 169 10192 75484 51604 113 10197 10575 114 10108 10105 30550 91879 87277 113 10197 114 119 10117 23460 78304 113 10197 10113 114 10124 11954 54561 10114 10105 10192 75484 51604 113 10197 10575 114 11084 10105 23460 118 13621 23722 27894 47023 113 10186 114 10111 10173 73657 10336 10114 10349 56906 23460 10108 30550 119 10117 30550 91879 33091 14586 15433 169 38112 16511 113 10314 114 10142 15180 10230 16080 30856 12929 117 10319 50239 10151 91879 62906 10108 10105 30550 91879 87277 113 10197 114 119 10117 91879 62906 10124 27345 10155 10151 65548 119 10117 16080 30856 12929 50239 169 19808 10948 10151 91879 11388 102
+input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Saving features into cached file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/dataset/summary_pickle/cached_test_features_256_bert
+loading configuration file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/output/checkpoints/bert/config.json
+Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 119547
+}
+
+loading weights file /home/home1/xw176/work/Bert-Multi-Label-Text-Classification/pybert/output/checkpoints/bert/pytorch_model.bin
+model predicting....
